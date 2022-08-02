@@ -1,0 +1,85 @@
+const origin = window.location.hostname === '127.0.0.1' ? "http://127.0.0.1:5508" : "https://music.siliconwat.com";
+const template = document.createElement("template");
+
+template.innerHTML = `
+    <link rel="stylesheet" href="${origin}/components/sw-piano/shadow.css">
+    <ul>
+        <li>
+            <span>C4</span>
+        </li>
+        <li>
+            <span>C&#9839;</span>
+        </li>
+        <li>
+            <span>D4</span>
+        </li>
+        <li>
+            <span>D&#9839;</span>
+        </li>
+        <li>
+            <span>E4</span>
+        </li>
+        <li>
+            <span>F4</span>
+        </li>
+        <li>
+            <span>F&#9839;</span>
+        </li>
+        <li>
+            <span>G4</span>
+        </li>
+        <li>
+            <span>G&#9839;</span>
+        </li>
+        <li>
+            <span>A4</span>
+        </li>
+        <li>
+            <span>A&#9839;</span>
+        </li>
+        <li>
+            <span>B4</span>
+        </li>
+        <li>
+            <span>C5</span>
+        </li>
+        <li>
+            <span>C&#9839;</span>
+        </li>
+        <li>
+            <span>D5</span>
+        </li>
+        <li>
+            <span>D&#9839;</span>
+        </li>
+        <li>
+            <span>E5</span>
+        </li>
+        <li>
+            <span>F5</span>
+        </li>
+        <li>
+            <span>F&#9839;</span>
+        </li>
+        <li>
+            <span>G5</span>
+        </li>
+        <li>
+            <span>G&#9839;</span>
+        </li>
+        <li>
+            <span>A5</span>
+        </li>
+        <li>
+            <span>A&#9839;</span>
+        </li>
+        <li>
+            <span>B5</span>
+        </li>
+        <li>
+            <span>C6</span>
+        </li>
+    </ul>
+`;
+
+export default template;

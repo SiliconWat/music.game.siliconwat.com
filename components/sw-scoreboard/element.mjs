@@ -1,6 +1,6 @@
 import template from './template.mjs';
 
-export class SwPiano extends HTMLElement {
+export class SwScoreboard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });

@@ -1,3 +1,9 @@
+import { SwTimer } from "/components/sw-timer/element.mjs";
+customElements.define("sw-timer", SwTimer);
+
+import { SwScoreboard } from "/components/sw-scoreboard/element.mjs";
+customElements.define("sw-scoreboard", SwScoreboard);
+
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -7,17 +13,18 @@ template.innerHTML = `
             <li>
                 <h3>Piano Playing</h3>
                 <nav>
-                    <span>Treble Clef: Sheet => Piano</span>
-                    <span>Bass Clef</span>
-                    <span>Treble + Bass Clef</span>
                     <span>Circle of Fifths</span>
+                    <span>Circle of Fourths</span>
                     <span>Scales and Modes</span>
+                    <span>Intervals</span>
                 </nav>
             </li>
             <li>
                 <h3>Sight Reading</h3>
                 <nav>
-                    <span>Treble Clef: Piano => Sheet</span>
+                    <span>Sheet => Piano</span>
+                    <span>Piano => Sheet</span>
+                    <span>Treble Clef</span>
                     <span>Bass Clef</span>
                     <span>Treble + Bass Clef</span>
                 </nav>
@@ -44,30 +51,11 @@ template.innerHTML = `
                 </nav>
             </li>
         </ul>
-        <ul>
-            <li>
-                <label>00:00</label>
-            </li>
-            <li>
-                <span>▶️</span>
-                <span>⏸</span>
-                <span>⏹</span>
-            </li>
-            <li>
-                <span>Score: 100%</span>
-                <span>Correct: 0</span>
-                <span>Wrong: 0</span>
-            </li>
-            <li>
-                <span>🎹</span>
-                <span>⌨️</span>
-                <span>⎋</span>
-            </li>
-            <li>
-                <span>🎤</span>
-                <span>📷</span>
-            </li>
-        </ul>
+        <aside>
+            <sw-timer></sw-timer>
+            <sw-scoreboard></sw-scoreboard>
+            <sw-instrument></sw-instrument>
+        </aside>
     </section>
 `;
 

@@ -11,6 +11,10 @@ window.onload = async () => {
     customElements.define("sw-piano", SwPiano);
 }
 
+const SwMenuElement = document.querySelector('sw-menu');
+
+window.addEventListener('correct', SwMenuElement.incrementCorrect);
+
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());

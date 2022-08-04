@@ -3,9 +3,9 @@ const template = document.createElement("template");
 template.innerHTML = `
     <link rel="stylesheet" href="components/sw-scoreboard/shadow.css">
     <ul>
-        <li>Score: 100%</li>
-        <li>Correct: 0</li>
-        <li>Wrong: 0</li>
+        <li>Score: <span id="score">0%</span></li>
+        <li>Correct: <span id="correct">0</span></li>
+        <li>Wrong: <span id="wrong">0</span></li>
     </ul>
 `;
 

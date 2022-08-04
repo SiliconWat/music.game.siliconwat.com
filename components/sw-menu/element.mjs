@@ -5,6 +5,8 @@ export class SwMenu extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+        this.incrementCorrect = this.incrementCorrect.bind(this);
     }
 
     async connectedCallback() {
@@ -12,5 +14,9 @@ export class SwMenu extends HTMLElement {
 
         const { SwInstrument } = await import(`${origin}/components/sw-instrument/element.mjs`);
         customElements.define("sw-instrument", SwInstrument);
+    }
+
+    incrementCorrect() {
+        this.shadowRoot.querySelector('sw-scoreboard').incrementCorrect();
     }
 }

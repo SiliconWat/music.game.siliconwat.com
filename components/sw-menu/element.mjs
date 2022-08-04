@@ -7,6 +7,7 @@ export class SwMenu extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.incrementCorrect = this.incrementCorrect.bind(this);
+        this.incrementWrong = this.incrementWrong.bind(this);
     }
 
     async connectedCallback() {
@@ -18,5 +19,9 @@ export class SwMenu extends HTMLElement {
 
     incrementCorrect() {
         this.shadowRoot.querySelector('sw-scoreboard').incrementCorrect();
+    }
+
+    incrementWrong() {
+        this.shadowRoot.querySelector('sw-scoreboard').incrementWrong();
     }
 }

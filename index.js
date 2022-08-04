@@ -12,8 +12,8 @@ window.onload = async () => {
 }
 
 const SwMenuElement = document.querySelector('sw-menu');
-
 window.addEventListener('correct', SwMenuElement.incrementCorrect);
+window.addEventListener('wrong', SwMenuElement.incrementWrong);
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

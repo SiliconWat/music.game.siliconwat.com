@@ -11,31 +11,17 @@ template.innerHTML = `
     <section>
         <ul>
             <li>
-                <h3>Piano Playing</h3>
-                <nav>
-                    <span>Circle of Fifths</span>
-                    <span>Circle of Fourths</span>
-                    <span>Scales and Modes</span>
-                    <span>Intervals</span>
-                </nav>
-            </li>
-            <li>
                 <h3>Sight Reading</h3>
                 <nav>
                     <span>Sheet => Piano</span>
-                    <span>Piano => Sheet</span>
-                    <span>Treble Clef</span>
-                    <span>Bass Clef</span>
-                    <span>Treble + Bass Clef</span>
+                    <span>Circle of Fifths/Fourths</span>
+                    <span>Scales and Modes: Intervals</span>
                 </nav>
             </li>
             <li>
                 <h3>Ear Training</h3>
                 <nav>
-                    <span>Sound => Sheet</span>
-                    <span>Sound => Piano</span>
-                    <span>Relative</span>
-                    <span>Absolute</span>
+                    <span>Sound => Piano => Sheet: Always Relative</span>
                     <span>Intervals</span>
                     <span>Chords</span>
                     <span>7ths</span>
@@ -44,10 +30,9 @@ template.innerHTML = `
             <li>
                 <h3>Rhythm Training</h3>
                 <nav>
-                    <span>Melody => Sheet</span>
-                    <span>Melody => Piano</span>
-                    <span>Chord Progressions</span>
-                    <span>Jazz Progressions</span>
+                    <span>Melody => Piano => Sheet</span>
+                    <span>Chord Progressions => Baseline</span>
+                    <span>Jazz Progressions => Baseline</span>
                 </nav>
             </li>
         </ul>

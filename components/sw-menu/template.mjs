@@ -36,11 +36,7 @@ template.innerHTML = `
                 </nav>
             </li>
         </ul>
-        <aside>
-            <sw-timer></sw-timer>
-            <sw-scoreboard></sw-scoreboard>
-            <sw-instrument></sw-instrument>
-        </aside>
+        <slot></slot>
     </section>
 `;
 

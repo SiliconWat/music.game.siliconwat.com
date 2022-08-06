@@ -18,10 +18,10 @@ export class SwMenu extends HTMLElement {
     }
 
     incrementCorrect() {
-        this.shadowRoot.querySelector('sw-scoreboard').incrementCorrect();
+        this.querySelector('sw-scoreboard').incrementCorrect();
     }
 
     incrementWrong() {
-        this.shadowRoot.querySelector('sw-scoreboard').incrementWrong();
+        this.querySelector('sw-scoreboard').incrementWrong();
     }
 }

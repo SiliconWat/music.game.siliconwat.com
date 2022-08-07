@@ -1,6 +1,16 @@
 import template from './template.mjs';
 
 export class SwTimer extends HTMLElement {
+    static getFormattedDuration(totalSeconds) {
+        const m = Math.floor(totalSeconds % 3600 / 60);
+        const s = Math.floor(totalSeconds % 3600 % 60);
+    
+        const minutes = String(m).padStart(2, '0');
+        const seconds = String(s).padStart(2, '0');
+    
+        return `${minutes}:${seconds}`;
+    }
+
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -56,15 +66,5 @@ export class SwTimer extends HTMLElement {
 
     updateDuration() {
         this.shadowRoot.getElementById('duration').textContent = SwTimer.getFormattedDuration((new Date() - this.startTime) / 1000);
-    }
-
-    static getFormattedDuration(totalSeconds) {
-        const m = Math.floor(totalSeconds % 3600 / 60);
-        const s = Math.floor(totalSeconds % 3600 % 60);
-    
-        const minutes = String(m).padStart(2, '0');
-        const seconds = String(s).padStart(2, '0');
-    
-        return `${minutes}:${seconds}`;
     }
 }

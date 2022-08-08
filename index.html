@@ -9,11 +9,26 @@
     </head>
     <body>
 		<header>
-			<sw-menu>
+			<sw-nav>
+				<h3 slot="menu1">Sight Reading</h3>
+				<span slot="menu1-sub1">Sheet => Piano</span>
+				<span slot="menu1-sub2">Circle of Fifths/Fourths</span>
+				<span slot="menu1-sub3">Scales and Modes: Intervals</span>
+				<h3 slot="menu2">Ear Training</h3>
+				<span slot="menu2-sub1">Sound => Piano => Sheet: Always Relative</span>
+				<span slot="menu2-sub2">Intervals</span>
+				<span slot="menu2-sub3">Chords</span>
+				<span slot="menu2-sub4">7ths</span>
+				<h3 slot="menu3">Rhythm Training</h3>
+				<span slot="menu3-sub1">Melody => Piano => Sheet</span>
+				<span slot="menu3-sub2">Chord Progressions => Baseline</span>
+				<span slot="menu3-sub3">Jazz Progressions => Baseline</span>
+			</sw-nav>
+			<sw-menubar>
 				<sw-timer></sw-timer>
             	<sw-scoreboard></sw-scoreboard>
             	<sw-instrument></sw-instrument>
-			</sw-menu>
+			</sw-menubar>
 		</header>
 		<main>
 			<sw-editor></sw-editor>

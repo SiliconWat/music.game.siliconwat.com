@@ -8,8 +8,8 @@ export class SwScoreboard extends HTMLElement {
 
         this.correct = 0;
         this.wrong = 0;
-        //this.incrementCorrect = this.incrementCorrect.bind(this);
-        //this.incrementWrong = this.incrementWrong.bind(this);
+        this.incrementCorrect = this.incrementCorrect.bind(this);
+        this.incrementWrong = this.incrementWrong.bind(this);
     }
 
     incrementCorrect() {

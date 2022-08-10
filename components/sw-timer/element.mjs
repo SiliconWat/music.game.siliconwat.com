@@ -31,6 +31,8 @@ export class SwTimer extends HTMLElement {
         this.shadowRoot.getElementById('play').onclick = this.play;
         this.shadowRoot.getElementById('pause').onclick = this.pause;
         this.shadowRoot.getElementById('stop').onclick = this.stop;
+        this.shadowRoot.getElementById('treble').onclick = () => this.dispatchEvent(new CustomEvent("sw-clef", { bubbles: true, composed: true, detail: { clef: 'treble' }}));
+        this.shadowRoot.getElementById('bass').onclick = () => this.dispatchEvent(new CustomEvent("sw-clef", { bubbles: true, composed: true, detail: { clef: 'bass' }}));
     }
 
     play() {

@@ -23,9 +23,17 @@ window.onload = async () => {
     customElements.define("sw-piano", SwPiano);
 }
 
+const SWPianoElement = document.querySelector('sw-piano');
+window.addEventListener('sw-instrument', event => {
+    SWPianoElement.instrument = event.detail.instrument;
+});
+window.addEventListener('sw-clef', event => {
+    SWPianoElement.clef = event.detail.clef;
+});
+
 const SwScoreboardElement = document.querySelector('sw-scoreboard');
-window.addEventListener('correct', SwScoreboardElement.incrementCorrect);
-window.addEventListener('wrong', SwScoreboardElement.incrementWrong);
+window.addEventListener('sw-correct', SwScoreboardElement.incrementCorrect);
+window.addEventListener('sw-wrong', SwScoreboardElement.incrementWrong);
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

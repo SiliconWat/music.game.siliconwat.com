@@ -27,13 +27,12 @@ const SWPianoElement = document.querySelector('sw-piano');
 window.addEventListener('sw-instrument', event => {
     SWPianoElement.instrument = event.detail.instrument;
 });
-window.addEventListener('sw-clef', event => {
+window.addEventListener('sw-timer', event => {
     SWPianoElement.clef = event.detail.clef;
 });
 
 const SwScoreboardElement = document.querySelector('sw-scoreboard');
-window.addEventListener('sw-correct', SwScoreboardElement.incrementCorrect);
-window.addEventListener('sw-wrong', SwScoreboardElement.incrementWrong);
+window.addEventListener('sw-editor', event => SwScoreboardElement[event.detail.answer ? 'incrementCorrect' : 'incrementWrong']());
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

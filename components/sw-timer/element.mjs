@@ -1,6 +1,6 @@
 import template from './template.mjs';
 
-export class SwTimer extends HTMLElement {
+class SwTimer extends HTMLElement {
     static getFormattedDuration(totalSeconds) {
         const m = Math.floor(totalSeconds % 3600 / 60);
         const s = Math.floor(totalSeconds % 3600 % 60);
@@ -70,3 +70,5 @@ export class SwTimer extends HTMLElement {
         this.shadowRoot.getElementById('duration').textContent = SwTimer.getFormattedDuration((new Date() - this.startTime) / 1000);
     }
 }
+
+customElements.define("sw-timer", SwTimer);

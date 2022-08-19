@@ -1,6 +1,6 @@
 import template from './template.mjs';
 
-export class SwScoreboard extends HTMLElement {
+class SwScoreboard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -22,3 +22,5 @@ export class SwScoreboard extends HTMLElement {
         this.shadowRoot.getElementById('score').textContent = Math.round(this.correct*100/(this.correct + this.wrong)) + "%";
     }
 }
+
+customElements.define("sw-scoreboard", SwScoreboard);

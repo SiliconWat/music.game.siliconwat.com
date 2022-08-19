@@ -1,4 +1,4 @@
-export class SwMusic extends HTMLBodyElement {
+class SwMusic extends HTMLBodyElement {
     #body;
 
     constructor() {
@@ -21,3 +21,5 @@ export class SwMusic extends HTMLBodyElement {
         this.#body.addEventListener('sw-editor', event => this.SwScoreboard[event.detail.answer ? 'incrementCorrect' : 'incrementWrong']());
     }
 }
+
+customElements.define('sw-music', SwMusic, { extends: 'body' });

@@ -3,7 +3,7 @@ import "/components/sw-timer/element.mjs";
 import "/components/sw-scoreboard/element.mjs";
 
 window.onload = async () => {
-    const origin = window.location.hostname === '127.0.0.1' ? "http://127.0.0.1:5660" : "https://music.siliconwat.com";
+    const origin = window.location.hostname === '127.0.0.1' ? "http://127.0.0.1:5660" : "https://music.siliconwat.dev";
     await import(`${origin}/components/sw-nav/element.mjs`);
     await import(`${origin}/components/sw-menubar/element.mjs`);
     await import(`${origin}/components/sw-instrument/element.mjs`);
